@@ -4,5 +4,5 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
-  padding-top: 80px;
+  padding: 80px 0 120px 0;
 `

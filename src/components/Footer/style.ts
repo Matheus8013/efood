@@ -8,7 +8,6 @@ export const FooterContainer = styled.div`
   width: 100%;
   background-color: ${cores.buttonTextColor};
   height: 298px;
-  margin-top: 80px;
 `
 
 export const LogoContainer = styled.div`
