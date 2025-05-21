@@ -2,7 +2,8 @@ import { Container } from '../../styles'
 import { Branding } from '../Hero/styles'
 import { Banner, NavBar, NavLink, NavText, RestaurantHeader } from './styles'
 import logo from '../../assets/images/logo.png'
-import banner from '../../assets/images/apresentacao.png'
+
+import image from '../../assets/images/image_1.png'
 
 const RestaurantHero = () => (
   <>
@@ -15,7 +16,12 @@ const RestaurantHero = () => (
         </NavBar>
       </Container>
     </RestaurantHeader>
-    <Banner src={banner} alt="" />
+    <Banner style={{ backgroundImage: `url(${image})` }}>
+      <Container>
+        <div className="subTitle">Italiana</div>
+        <div className="title">La Dolce Vita Trattoria</div>
+      </Container>
+    </Banner>
   </>
 )
 

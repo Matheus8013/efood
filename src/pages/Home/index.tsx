@@ -2,7 +2,7 @@ import Hero from '../../components/Hero'
 import RestaurantClass from '../../models/Restaurant'
 
 import Image from '../../assets/images/imagem.png'
-import Image2 from '../../assets/images/image 1.png'
+import Image2 from '../../assets/images/image_1.png'
 import RestaurantList from '../../components/RestaurantList'
 import { Container } from '../../styles'
 
