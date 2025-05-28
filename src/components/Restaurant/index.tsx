@@ -13,26 +13,35 @@ import estrela from '../../assets/images/estrela.png'
 
 type Props = {
   restauranTitle: string
-  restaurantRate: string
+  restaurantRate: number
   restaurantDescription: string
-  restaurantDetails: string[]
+  restaurantHighLight?: boolean
   restaurantImage: string
+  restaurantType: string
+  id: number
 }
 
 const Restaurant = ({
   restauranTitle,
   restaurantRate,
   restaurantDescription,
-  restaurantDetails,
-  restaurantImage
+  restaurantHighLight,
+  restaurantImage,
+  restaurantType,
+  id
 }: Props) => {
   return (
     <Card>
       <Image src={restaurantImage} alt={restauranTitle} />
       <Details>
-        {restaurantDetails.map((detail) => (
-          <Button key={detail}>{detail}</Button>
-        ))}
+        {restaurantHighLight ? (
+          <>
+            <Button>{'Destaque da Semana'}</Button>
+            <Button>{restaurantType}</Button>
+          </>
+        ) : (
+          <Button>{restaurantType}</Button>
+        )}
       </Details>
       <ContainerTitle>
         <Title>{restauranTitle}</Title>
@@ -42,7 +51,7 @@ const Restaurant = ({
         </Rate>
       </ContainerTitle>
       <Description>{restaurantDescription}</Description>
-      <Button type="link" to="/RestaurantPage">
+      <Button type="link" to={`/RestaurantPage/${id}`}>
         Saiba mais
       </Button>
     </Card>

@@ -1,9 +1,8 @@
-import DishClass from '../../models/Dish'
-import DishCard from '../DishCard'
+import DishCard, { DishItem } from '../DishCard'
 import { List } from './styles'
 
 export type Props = {
-  dishs: DishClass[]
+  dishs: DishItem[]
 }
 
 const DishList = ({ dishs }: Props) => (
@@ -11,9 +10,11 @@ const DishList = ({ dishs }: Props) => (
     {dishs.map((dish) => (
       <DishCard
         key={dish.id}
-        DishImg={dish.DishImg}
-        DishTitle={dish.DishTitle}
-        DishInfo={dish.DishInfo}
+        DishImg={dish.foto}
+        DishTitle={dish.nome}
+        DishInfo={dish.descricao}
+        DishSize={dish.porcao}
+        DishPrice={dish.preco}
       />
     ))}
   </List>

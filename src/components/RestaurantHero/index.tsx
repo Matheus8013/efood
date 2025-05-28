@@ -3,9 +3,13 @@ import { Branding } from '../Hero/styles'
 import { Banner, NavBar, NavLink, NavText, RestaurantHeader } from './styles'
 import logo from '../../assets/images/logo.png'
 
-import image from '../../assets/images/image_1.png'
+import { Resturante } from '../../pages/Home'
 
-const RestaurantHero = () => (
+type Prosps = {
+  restaurant: Resturante
+}
+
+const RestaurantHero = ({ restaurant }: Prosps) => (
   <>
     <RestaurantHeader>
       <Container>
@@ -16,10 +20,10 @@ const RestaurantHero = () => (
         </NavBar>
       </Container>
     </RestaurantHeader>
-    <Banner style={{ backgroundImage: `url(${image})` }}>
+    <Banner style={{ backgroundImage: `url(${restaurant.capa})` }}>
       <Container>
-        <div className="subTitle">Italiana</div>
-        <div className="title">La Dolce Vita Trattoria</div>
+        <div className="subTitle">{restaurant.tipo}</div>
+        <div className="title">{restaurant.titulo}</div>
       </Container>
     </Banner>
   </>

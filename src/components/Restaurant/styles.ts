@@ -44,6 +44,6 @@ export const Description = styled.p`
   font-size: 14px;
   font-weight: normal;
   line-height: 22px;
-  margin-right: 8px;
-  margin-left: 8px;
+  margin: 16px 8px 16px 8px;
+  min-height: 120px;
 `

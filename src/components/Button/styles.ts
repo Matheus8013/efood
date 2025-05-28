@@ -10,7 +10,6 @@ export const ButtonContainer = styled(Link)<Props>`
   font-size: ${(props) => (props.type === 'link' ? '14px' : '12px')};
   cursor: ${(props) => (props.type === 'link' ? 'pointer' : 'default')};
   text-decoration: none;
-  margin-top: 16px;
   margin-bottom: 8px;
   margin-left: 8px;
   padding: 8px;

@@ -1,9 +1,9 @@
-import RestaurantClass from '../../models/Restaurant'
+import { Resturante } from '../../pages/Home'
 import Restaurant from '../Restaurant'
 import { List } from './style'
 
 export type Props = {
-  restaurants: RestaurantClass[]
+  restaurants: Resturante[]
 }
 
 const RestaurantList = ({ restaurants }: Props) => (
@@ -11,11 +11,13 @@ const RestaurantList = ({ restaurants }: Props) => (
     {restaurants.map((restaurant) => (
       <Restaurant
         key={restaurant.id}
-        restauranTitle={restaurant.restaurantTitle}
-        restaurantRate={restaurant.restaurantRating}
-        restaurantDescription={restaurant.restaurantDescription}
-        restaurantDetails={restaurant.restaurantDetails}
-        restaurantImage={restaurant.restaurantImage}
+        id={restaurant.id}
+        restauranTitle={restaurant.titulo}
+        restaurantRate={restaurant.avaliacao}
+        restaurantDescription={restaurant.descricao}
+        restaurantType={restaurant.tipo}
+        restaurantImage={restaurant.capa}
+        restaurantHighLight={restaurant.destacado}
       />
     ))}
   </List>
