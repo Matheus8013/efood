@@ -69,7 +69,7 @@ const DishCard = ({
               <p>{DishInfo}</p>
               <span>Serve: de {DishSize}</span>
               <S.DishBtn type="button">
-                Adicionar ao carrinho - R$ {formartaPreco(DishPrice)}
+                Adicionar ao carrinho - {formartaPreco(DishPrice)}
               </S.DishBtn>
             </div>
           </div>

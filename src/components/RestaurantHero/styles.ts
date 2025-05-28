@@ -41,6 +41,7 @@ export const Banner = styled.div`
   height: 280px;
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center;
 
   &::after {
     position: absolute;
