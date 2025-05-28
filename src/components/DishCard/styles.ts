@@ -82,7 +82,7 @@ export const ModalContent = styled.div`
   width: 100%;
   height: 344px;
   background-color: ${cores.textColor};
-  color: ${cores.fundoClaro};
+  color: #fff;
 
   > img {
     position: absolute;
