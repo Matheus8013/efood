@@ -12,6 +12,7 @@ export const ButtonContainer = styled(Link)<Props>`
   text-decoration: none;
   margin-bottom: 8px;
   margin-left: 8px;
+  margin-top: ${(props) => (props.type === 'link' ? '0' : '16px')};
   padding: 8px;
   font-weight: bold;
   display: inline-block;
