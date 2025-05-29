@@ -20,6 +20,7 @@ export const NavLink = styled(Link)`
 export const NavText = styled.h3`
   font-size: 18px;
   font-weight: 900;
+  cursor: pointer;
 `
 
 export const NavBar = styled.nav`

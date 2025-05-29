@@ -18,14 +18,21 @@ const cartSice = createSlice({
     add: (state, action: PayloadAction<DishItem>) => {
       state.items.push(action.payload)
     },
-    remove: (state, action: PayloadAction<number>) => {
-      state.items = state.items.filter((item) => item.id !== action.payload)
-    },
     open: (state) => {
       state.isOpen = true
     },
     close: (state) => {
       state.isOpen = false
+    },
+    remove: (state, action: PayloadAction<number>) => {
+      const idToRemove = action.payload
+      const indexToRemove = state.items.findIndex(
+        (item) => item.id === idToRemove
+      )
+
+      if (indexToRemove !== -1) {
+        state.items.splice(indexToRemove, 1)
+      }
     }
   }
 })

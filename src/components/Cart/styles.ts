@@ -23,7 +23,7 @@ export const CartiContainer = styled.div`
   justify-content: flex-end;
   z-index: 1;
 
-  &.isOpen {
+  &.is-Open {
     display: flex;
   }
 `
@@ -46,6 +46,12 @@ export const Sidebar = styled.aside`
   ${DishBtn} {
     margin: 0;
     width: 100%;
+  }
+
+  .empty {
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
   }
 `
 

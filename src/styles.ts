@@ -6,6 +6,11 @@ export const cores = {
   buttonTextColor: '#FFEBD9'
 }
 
+export const breakpoints = {
+  desktop: '1024px',
+  tablet: '768px'
+}
+
 export const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -24,4 +29,8 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: 1024px;
   width: 100%;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    max-width: 80%;
+  }
 `

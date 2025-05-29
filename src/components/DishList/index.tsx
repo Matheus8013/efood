@@ -15,6 +15,7 @@ const DishList = ({ dishs }: Props) => (
         DishInfo={dish.descricao}
         DishSize={dish.porcao}
         DishPrice={dish.preco}
+        dishItem={dish}
       />
     ))}
   </List>

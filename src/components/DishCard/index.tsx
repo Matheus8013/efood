@@ -2,6 +2,9 @@ import * as S from './styles'
 
 import close from '../../assets/images/close.png'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
+
+import { add, open } from '../../store/reducers/cart'
 
 export type DishItem = {
   foto: string
@@ -18,6 +21,7 @@ type Props = {
   DishInfo: string
   DishSize: string
   DishPrice: number
+  dishItem: DishItem
 }
 
 const DishCard = ({
@@ -25,8 +29,17 @@ const DishCard = ({
   DishTitle,
   DishInfo,
   DishSize,
-  DishPrice
+  DishPrice,
+  dishItem
 }: Props) => {
+  const dispatch = useDispatch()
+
+  const addToCart = () => {
+    dispatch(add(dishItem))
+    dispatch(open())
+    closeModal()
+  }
+
   const [modal, setModal] = useState({
     isActive: false
   })
@@ -68,7 +81,7 @@ const DishCard = ({
               <h3>{DishTitle}</h3>
               <p>{DishInfo}</p>
               <span>Serve: de {DishSize}</span>
-              <S.DishBtn type="button">
+              <S.DishBtn onClick={addToCart} type="button">
                 Adicionar ao carrinho - {formartaPreco(DishPrice)}
               </S.DishBtn>
             </div>
