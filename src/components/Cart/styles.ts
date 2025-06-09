@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 import { DishBtn } from '../DishCard/styles'
 
+type InputGroupProps = {
+  maxwidth?: string
+}
+
 export const Overlay = styled.div`
   height: 100%;
   width: 100%;
@@ -45,13 +49,31 @@ export const Sidebar = styled.aside`
 
   ${DishBtn} {
     margin: 0;
-    width: 100%;
+    width: 344px;
   }
 
   .empty {
     display: flex;
     justify-content: center;
     padding-top: 8px;
+  }
+
+  .mb-24 {
+    margin-bottom: 24px;
+  }
+
+  .mb-16 {
+    margin-bottom: 16px;
+  }
+
+  .mb-8 {
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
   }
 `
 
@@ -83,12 +105,6 @@ export const Item = styled.li`
       font-weight: 900;
       margin-bottom: 16px;
     }
-
-    p {
-      font-size: 14px;
-      font-weight: 408;
-      line-height: 22px;
-    }
   }
 `
 
@@ -102,4 +118,40 @@ export const ItemImg = styled.img`
   width: 80px;
   height: 80px;
   object-fit: cover;
+`
+
+export const Row = styled.div`
+  display: flex;
+  column-gap: 34px;
+  margin-bottom: 16px;
+  align-items: flex-end;
+`
+
+export const InputGroups = styled.div<InputGroupProps>`
+  flex: auto;
+
+  max-width: ${(props) => props.maxwidth || 'auto'};
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  input {
+    width: 100%;
+    height: 32px;
+    background-color: ${cores.buttonTextColor};
+    border: solid 1px transparent;
+    text-align: center;
+
+    &:focus {
+      outline: none;
+    }
+
+    &.error {
+      border: 4px solid red;
+    }
+  }
 `

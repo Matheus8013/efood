@@ -33,9 +33,12 @@ const cartSice = createSlice({
       if (indexToRemove !== -1) {
         state.items.splice(indexToRemove, 1)
       }
+    },
+    clear: (state) => {
+      state.items = []
     }
   }
 })
 
-export const { add, remove, open, close } = cartSice.actions
+export const { add, remove, open, close, clear } = cartSice.actions
 export default cartSice.reducer

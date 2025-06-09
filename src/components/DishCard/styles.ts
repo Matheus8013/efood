@@ -35,7 +35,7 @@ export const DishBtn = styled.button`
   text-align: center;
   width: 304px;
   height: 24px;
-  background-color: ${cores.fundoClaro};
+  background-color: ${cores.buttonTextColor};
   color: ${cores.textColor};
   font-size: 14px;
   font-weight: 700;
@@ -63,6 +63,7 @@ export const Modal = styled.div`
 
   ${DishBtn} {
     margin: 0;
+    width: 218px;
   }
 
   .overlay {
